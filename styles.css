@@ -10,10 +10,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #fff;
 }
 
 body {
     background-color: #000;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 /* root */
@@ -23,6 +28,8 @@ body {
     --fontOswald: "Oswald", sans-serif;
     --fontPoppins: "Poppins", sans-serif;
     --fontRosarivo: "Rosarivo", sans-serif;
+    --cinzaEscuro: #626262;
+    --cinzaClaro: #727473;
 }
 
 /* header */
@@ -123,6 +130,90 @@ header {
     }
 }
 
+/* home */
+.home {
+    width: 100vw;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+
+    .home-content {
+        width: 95%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        .nome-skill {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+
+            .nome {
+                font-size: 11.3rem;
+                font-family: var(--fontOswald);
+                text-transform: uppercase;
+                line-height: 200px;
+                margin-top: 50px;
+                max-width: 200px;
+            }
+
+            .skill {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-family: var(--fontRosarivo);
+
+                h3 {
+                    font-size: 1.92rem;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                    margin-top: 7px;
+                }
+
+                svg {
+                    animation: rotate 12s linear infinite;
+                }
+            }
+        }
+
+        .image-andre {
+            position: absolute;
+            top: 11%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        
+            img {
+                width: 684.5px;
+                filter: grayscale(0.8);
+                user-select: none;
+                pointer-events: none;
+            }
+        }
+
+        .p-home {
+            margin-top: 200px;
+
+            p {
+                font-size: 1.7rem;
+                text-align: center;
+                font-family: var(--fontRosarivo);
+                font-weight: lighter;
+                max-width: 500px;
+                word-wrap: break-word;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
 /* keyframes */
 @keyframes btn-animateColor {
     0% {
@@ -130,5 +221,14 @@ header {
     }
     100% {
         background-position: 0 50%;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
