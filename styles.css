@@ -486,10 +486,10 @@ header {
     .divisor {
         img {
             position: absolute;
-            bottom: -150px;
+            bottom: -149px;
             left: 50%;
             transform: translate(-50%, 0%);
-            width: 101%;
+            width: 1920px;
         }
     }
 }
@@ -510,9 +510,13 @@ header {
         align-items: center;
         margin: 120px 0 50px 0;
         padding: 50px;
+        gap: 50px;
 
         .sobre-img {
-            width: 2500px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             img {
                 width: 100%;
@@ -525,7 +529,6 @@ header {
             flex-direction: column;
             gap: 30px;
             text-align: center;
-            padding: 0 200px;
 
             h2 {
                 color: #030104;
@@ -554,6 +557,7 @@ header {
                 color: #000000c2;
                 font-family: var(--fontInter);
                 font-size: 1.3rem;
+                min-width: 50%;
             }
         }
     }
@@ -716,7 +720,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: fixed;
         z-index: -1;
         transition: 0.3s ease-in-out;
 
@@ -730,16 +734,15 @@ header {
             left: 50%;
             transform: translate(-200%, 4%);
             transition: 0.3s ease-in-out;
-            overflow-wrap: break-word;
     
             .content {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 50px;
+                gap: 20px;
                 border: 1px solid #ffff;
                 padding: 50px;
-                border-radius: 50px;
+                border-radius: 30px;
                 position: relative;
                 backdrop-filter: blur(25px);
 
@@ -751,15 +754,14 @@ header {
     
                     button {
                         border: none;
-                        background: #ff3030;
+                        background: #ff0000;
                         border-radius: 10px;
                         display: flex;
                         align-items: center;
                         cursor: pointer;
-                        transition: 0.2s ease-in-out;
     
                         &:hover {
-                            box-shadow: 3px 3px 0px #ffffffbe;
+                            background-color: #ff3030;
                         }
                     }
                 }
@@ -768,7 +770,7 @@ header {
                     border-radius: 30px;
                     transition: 0.2s ease-in-out;
                     width: 100%;
-    
+
                     &:hover {
                         transform: scale(1.01);
                     }
@@ -806,10 +808,9 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.959) 50%, rgba(10, 12, 16, 0.99) 85%);
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.979) 50%, rgba(10, 12, 16, 0.99) 85%);
     z-index: 10;
 }
-
 
 /* keyframes */
 @keyframes btn-animateColor {
@@ -833,6 +834,20 @@ header {
 }
 
 /* responsividade */
+@media (max-width: 1445px) {
+    .sobre {
+        .sobre-content {
+            flex-wrap: wrap-reverse;
+
+            .sobre-img {
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 520px) {
     .marcas {
         .detalhes-marcas {

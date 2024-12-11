@@ -38,8 +38,10 @@
     </header>
 
     <main>
-        <!-- mask -->
+        <!-- mask formulário -->
         <div class="mask" onclick="esconderForm()"></div>
+        <!-- mask detalhes -->
+        <div class="mask maskDetalhes"></div>
 
         <!-- home -->
         <section class="home" id="home">
@@ -294,7 +296,7 @@
                         <img src="img/natus-capa.png" alt="capa-natus">
                         <div class="all-project-info natus-info">
                             <h3>Natus</h3>
-                            <a href="#" class="link-all"><i>Saiba mais</i> <svg width="30px" height="30px"
+                            <a href="#projetos" class="link-all" onclick="mostrarDetalhesNatus()"><i>Saiba mais</i> <svg width="30px" height="30px"
                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -309,7 +311,7 @@
                         <img src="img/wepudim-capa.png" alt="capa-wepudim">
                         <div class="all-project-info wepudim-info">
                             <h3>WePudim</h3>
-                            <a href="#" class="link-all"><i>Saiba mais</i> <svg width="30px" height="30px"
+                            <a href="#projetos" class="link-all" onclick="mostrarDetalhesWePudim()"><i>Saiba mais</i> <svg width="30px" height="30px"
                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -324,7 +326,7 @@
                         <img src="img/casacristã-capa.png" alt="capa-casacrista">
                         <div class="all-project-info casacrista-info">
                             <h3>Casa Cristã</h3>
-                            <a href="#" class="link-all"><i>Saiba mais</i> <svg width="30px" height="30px"
+                            <a href="#projetos" class="link-all" onclick="mostrarDetalhesCasaCrista()"><i>Saiba mais</i> <svg width="30px" height="30px"
                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -339,7 +341,7 @@
                         <img src="img/besucrée-capa.png" alt="capa-besucree">
                         <div class="all-project-info besucree-info">
                             <h3>Be Sucrée</h3>
-                            <a href="#" class="link-all"><i>Saiba mais</i> <svg width="30px" height="30px"
+                            <a href="#projetos" class="link-all" onclick="mostrarDetalhesBeSucree()"><i>Saiba mais</i> <svg width="30px" height="30px"
                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -357,34 +359,194 @@
                     <div class="content">
     
                         <div class="btn-fechar">
-                            <button onclick="fechaDetalhes()">
+                            <button onclick="fechaDetalhesGranulato()">
                                 <img width="40" height="40" src="https://img.icons8.com/sf-black-filled/50/FFFFFF/x.png"
                                     alt="x" />
                             </button>
                         </div>
     
                         <div class="main-img">
-                            <img src="img/granulato-capaDetalhes.png" class="img" alt="">
+                            <img src="img/detalhes/granulato/granulato-capaDetalhes.png" class="img" alt="">
                         </div>
     
                         <div class="variables-img">
                             <div class="box-images">
-                                <img src="img/granulato-variable1.png" class="img" alt="">
+                                <img src="img/detalhes/granulato/granulato-variable1.png" class="img" alt="">
                             </div>
                             <div class="box-images">
-                                <img src="img/granulato-variable2.png" class="img" alt="">
+                                <img src="img/detalhes/granulato/granulato-variable2.png" class="img" alt="">
                             </div>
                             <div class="box-images">
-                                <img src="img/granulato-variable3.png" class="img" alt="">
+                                <img src="img/detalhes/granulato/granulato-variable3.png" class="img" alt="">
                             </div>
                             <div class="box-images">
-                                <img src="img/granulato-variable4.png" class="img" alt="">
+                                <img src="img/detalhes/granulato/granulato-variable4.png" class="img" alt="">
                             </div>
                             <div class="box-images">
-                                <img src="img/granulato-variable5.png" class="img" alt="">
+                                <img src="img/detalhes/granulato/granulato-variable5.png" class="img" alt="">
                             </div>
                             <div class="box-images">
-                                <img src="img/granulato-variable6.png" class="img" alt="">
+                                <img src="img/detalhes/granulato/granulato-variable6.png" class="img" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="detalhesNatus detalhes-marcas">
+                <div class="detalhes-content natus-content">
+                    <div class="content">
+    
+                        <div class="btn-fechar">
+                            <button onclick="fechaDetalhesNatus()">
+                                <img width="40" height="40" src="https://img.icons8.com/sf-black-filled/50/FFFFFF/x.png"
+                                    alt="x" />
+                            </button>
+                        </div>
+    
+                        <div class="main-img">
+                            <img src="img/detalhes/natus/natus-capaDetalhes.png" class="img" alt="">
+                        </div>
+    
+                        <div class="variables-img">
+                            <div class="box-images">
+                                <img src="img/detalhes/natus/natus-variable1.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/natus/natus-variable2.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/natus/natus-variable3.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/natus/natus-variable4.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/natus/natus-variable5.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/natus/natus-variable6.png" class="img" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="detalhesWePudim detalhes-marcas">
+                <div class="detalhes-content wepudim-content">
+                    <div class="content">
+    
+                        <div class="btn-fechar">
+                            <button onclick="fechaDetalhesWePudim()">
+                                <img width="40" height="40" src="https://img.icons8.com/sf-black-filled/50/FFFFFF/x.png"
+                                    alt="x" />
+                            </button>
+                        </div>
+    
+                        <div class="main-img">
+                            <img src="img/detalhes/wepudim/wepudim-capaDetalhes.png" class="img" alt="">
+                        </div>
+    
+                        <div class="variables-img">
+                            <div class="box-images">
+                                <img src="img/detalhes/wepudim/wepudim-variable1.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/wepudim/wepudim-variable2.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/wepudim/wepudim-variable3.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/wepudim/wepudim-variable4.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/wepudim/wepudim-variable5.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/wepudim/wepudim-variable6.png" class="img" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="detalhesCasaCrista detalhes-marcas">
+                <div class="detalhes-content casacrista-content">
+                    <div class="content">
+    
+                        <div class="btn-fechar">
+                            <button onclick="fechaDetalhesCasaCrista()">
+                                <img width="40" height="40" src="https://img.icons8.com/sf-black-filled/50/FFFFFF/x.png"
+                                    alt="x" />
+                            </button>
+                        </div>
+    
+                        <div class="main-img">
+                            <img src="img/detalhes/casacrista/casacrista-capaDetalhes.png" class="img" alt="">
+                        </div>
+    
+                        <div class="variables-img">
+                            <div class="box-images">
+                                <img src="img/detalhes/casacrista/casacrista-variable1.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/casacrista/casacrista-variable2.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/casacrista/casacrista-variable3.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/casacrista/casacrista-variable4.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/casacrista/casacrista-variable5.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/casacrista/casacrista-variable6.png" class="img" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="detalhesBeSucree detalhes-marcas">
+                <div class="detalhes-content besucree-content">
+                    <div class="content">
+    
+                        <div class="btn-fechar">
+                            <button onclick="fechaDetalhesBeSucree()">
+                                <img width="40" height="40" src="https://img.icons8.com/sf-black-filled/50/FFFFFF/x.png"
+                                    alt="x" />
+                            </button>
+                        </div>
+    
+                        <div class="main-img">
+                            <img src="img/detalhes/besucree/besucree-capaDetalhes.png" class="img" alt="">
+                        </div>
+    
+                        <div class="variables-img">
+                            <div class="box-images">
+                                <img src="img/detalhes/besucree/besucree-variable1.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/besucree/besucree-variable2.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/besucree/besucree-variable3.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/besucree/besucree-variable4.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/besucree/besucree-variable5.png" class="img" alt="">
+                            </div>
+                            <div class="box-images">
+                                <img src="img/detalhes/besucree/besucree-variable6.png" class="img" alt="">
                             </div>
                         </div>
                         
