@@ -226,11 +226,11 @@ header {
         .image-andre {
             position: absolute;
             top: 0;
-            left: 55%;
+            left: 47%;
             transform: translate(-50%, 0%);
 
             img {
-                width: 684.5px;
+                width: 180%;
                 filter: grayscale(0.8);
                 user-select: none;
                 pointer-events: none;
@@ -644,7 +644,7 @@ header {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            box-shadow: -2px 0 0 #ffffff85;
+            border-left: 1px solid #ffffff85;
             padding-left: 40px;
 
             .all-projects {
@@ -734,7 +734,7 @@ header {
             left: 50%;
             transform: translate(-200%, 4%);
             transition: 0.3s ease-in-out;
-    
+
             .content {
                 display: flex;
                 align-items: center;
@@ -751,7 +751,7 @@ header {
                     top: 0;
                     right: 0;
                     padding: 20px;
-    
+
                     button {
                         border: none;
                         background: #ff0000;
@@ -759,13 +759,13 @@ header {
                         display: flex;
                         align-items: center;
                         cursor: pointer;
-    
+
                         &:hover {
                             background-color: #ff3030;
                         }
                     }
                 }
-    
+
                 .img {
                     border-radius: 30px;
                     transition: 0.2s ease-in-out;
@@ -775,22 +775,23 @@ header {
                         transform: scale(1.01);
                     }
                 }
-    
-                .main-img, .box-images {
+
+                .main-img,
+                .box-images {
                     border-radius: 30px;
                     box-shadow: 4px 4px 10px #020202;
                 }
-    
+
                 .main-img {
                     width: auto;
                     height: auto;
                 }
-    
+
                 .box-images {
                     width: auto;
                     height: auto;
                 }
-    
+
                 .variables-img {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -810,6 +811,24 @@ header {
     height: 100%;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.979) 50%, rgba(10, 12, 16, 0.99) 85%);
     z-index: 10;
+}
+
+/* whatsapp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9;
+    background: #000;
+    border-radius: 50px;
+    padding: 15px;
+    box-shadow: 0 0 5px #ffffff1f;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 0 10px #ffffff1f;
+    }
 }
 
 /* keyframes */
@@ -834,6 +853,32 @@ header {
 }
 
 /* responsividade */
+@media (max-width: 1740px) {
+    .home {
+        .home-content {
+            flex-direction: column;
+            justify-content: space-around;
+
+            .nome-skill {
+                gap: 10px;
+            }
+
+            .image-andre {
+                left: 65%;
+            }
+
+            .p-home {
+                margin-top: 80px;
+
+                p {
+                    font-size: 1.4rem;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1445px) {
     .sobre {
         .sobre-content {
@@ -848,12 +893,149 @@ header {
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 1190px) {
+    .home {
+        border-bottom: 1px dashed #ffffff1a;
+
+        .home-content {
+            align-items: center;
+            text-align: center;
+
+
+            .nome-skill {
+                align-items: center;
+
+                .nome {
+                    font-size: 8.5rem;
+                    line-height: 180px;
+                    text-align: center;
+                    max-width: 500px;
+                }
+
+                .skill {
+                    h3 {
+                        font-size: 1.7rem;
+                    }
+
+                    svg {
+                        width: 32px;
+                    }
+                }
+            }
+
+            .image-andre {
+                display: none;
+            }
+
+            .p-home {
+                p {
+                    text-align: center;
+                }
+
+                p,
+                strong {
+                    color: #ffffffd5;
+                }
+            }
+        }
+    }
+
+    .whatsapp {
+        svg {
+            width: 40px;
+        }
+    }
+}
+
+@media (max-width: 1010px) {
+    header {
+        .header-content {
+            justify-content: space-between !important;
+            width: 100%;
+
+            .nav-list {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 875px) {
     .marcas {
+        .marcas-content {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .home {
+        .home-content {
+            .nome-skill {
+                .nome {
+                    font-size: 6rem;
+                    line-height: 120px;
+                }
+
+                .skill {
+                    gap: 10px;
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    svg {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .p-home {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    .marcas {
+        .marcas-content {
+            .projetos {
+                padding-left: 10px;
+
+                img {
+                    width: 200px;
+                }
+            }
+        }
+
         .detalhes-marcas {
             .detalhes-content {
                 .content {
                     flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    .whatsapp {
+        svg {
+            width: 35px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .marcas {
+        .marcas-content {
+            .projetos {
+                img {
+                    width: 150px;
+                }
+
+                .all-projects {
+                    h3 {
+                        font-size: 1.9rem;
+                    }
                 }
             }
         }
