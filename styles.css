@@ -949,6 +949,108 @@ header {
     }
 }
 
+/* formulario de contato */
+.contato {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contato-content {
+        width: 90%;
+        height: 100%;
+        background: #0e0d0d;
+        border-radius: 30px 0 0 30px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        font-family: var(--fontInter);
+        margin: 100px 0;
+        overflow: hidden;
+
+        .title {
+            h3 {
+                font-size: 3rem;
+            }
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .input-all {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                max-width: 60vw;
+
+                label {
+                    span {
+                        color: #ffffff88;
+                    }
+                }
+
+                input {
+                    padding: 12px;
+                }
+
+                textarea {
+                    height: 150px;
+                    padding: 10px;
+                    resize: vertical;
+                }
+
+                input, textarea {
+                    font-family: var(--fontInter);
+                    border-radius: 10px;
+                    border: 1px solid #ffffff88;
+                    background: transparent;
+                    margin-right: 20px;
+                }
+
+                input:focus-visible {
+                    background-color: #f0f0f009;
+                }
+            }
+        }
+
+        .btn-enviar {
+            margin-top: 10px;
+            
+            button {
+                padding: 12px 70px;
+                border-radius: 50px;
+                border: 2px solid #fff;
+                background: transparent;
+                cursor: pointer;
+                font-size: 1.1rem;
+                font-weight: 600;
+                font-family: var(--fontInter);
+                text-transform: uppercase;
+                transition: 0.2s ease;
+
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .image-cafe {
+        position: absolute;
+        right: 4%;
+
+        img {
+            width: 250px;
+        }
+    }
+}
+
 /* mask */
 .mask {
     visibility: hidden;
@@ -1120,6 +1222,24 @@ header {
         .marcas-content {
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    .contato {
+        .contato-content {
+            .inputs {
+                .input-all {
+                    max-width: 100%;
+                    
+                    input, textarea {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .image-cafe {
+            display: none;
         }
     }
 }
