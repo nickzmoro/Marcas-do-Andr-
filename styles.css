@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Cactus+Classical+Serif&family=Calistoga&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosarivo:ital@0;1&family=Staatliches&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Cactus+Classical+Serif&family=Calistoga&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosarivo:ital@0;1&family=Staatliches&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Cactus+Classical+Serif&family=Calistoga&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rosarivo:ital@0;1&family=Staatliches&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* tags gerais (html, body, *) */
 * {
@@ -445,8 +446,8 @@ header {
                 p {
                     font-family: var(--fontInter);
                     font-size: 1.3rem;
-                    color: #ffffffb4;
-                    font-weight: lighter;
+                    color: #a4a4a4b9;
+                    font-weight: 400;
 
                     strong {
                         font-weight: 600;
@@ -802,6 +803,152 @@ header {
     }
 }
 
+/* avaliações */
+.avaliacoes {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(img/background-avaliacoes.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .gradient {
+        position: absolute;
+        width: 100%;
+        height: 15vh;
+        background: linear-gradient(180deg, #000000 0%, #00000000 100%);
+    }
+
+    .gradient-top {
+        top: 0;
+    }
+
+    .gradient-bottom {
+        bottom: 0;
+        background: linear-gradient(360deg, #000000 0%, #00000000 100%);
+    }
+
+    .avalia-content {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        font-family: var(--fontInter);
+        z-index: 2;
+        padding: 100px 0;
+
+        .title {
+            h3 {
+                font-size: 3rem;
+                font-weight: 800;
+            }
+        }
+
+        .avalia-boxes {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            .box {
+                max-width: 400px;
+                border: 1px solid #5e5e5e9c;
+                padding: 15px 20px 30px 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+                border-radius: 25px;
+                background: #d9d9d905;
+                backdrop-filter: blur(10px);
+                transition: 0.2s ease;
+                overflow: hidden;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+
+                &:hover .info-top img {
+                    filter: saturate(100%);
+                }
+
+                .info-top {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    img {
+                        width: 100px;
+                        filter: saturate(0);
+                        transition: 0.5s ease;
+                    }
+
+                    h4 {
+                        font-size: 1.4rem;
+                    }
+
+                    h5 {
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                        color: #ffffffa6;
+                    }
+                }
+
+                .frase {
+                    position: relative;
+
+                    .aspas {
+                        position: absolute;
+                        bottom: -5px;
+                        left: -10px;
+                        pointer-events: none;
+                        user-select: none;
+
+                        span {
+                            font-family: "Playfair Display", serif;
+                            font-size: 10rem;
+                            color: #ffffff18;
+                        }
+                    }
+
+                    p {
+                        color: #ffffffa8;
+                        font-size: 1rem;
+                        line-height: 25px;
+                        margin: 0 10px;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+
+        .btn-contato {
+            a {
+                padding: 12px 30px;
+                cursor: pointer;
+                border-radius: 50px;
+                border: 2px solid #fff;
+                background: #00000046;
+                font-family: var(--fontInter);
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                transition: 0.2s ease;
+
+                &:hover {
+                    background: #000;
+                }
+            }
+        }
+    }
+}
+
 /* mask */
 .mask {
     visibility: hidden;
@@ -822,12 +969,20 @@ header {
     background: #000;
     border-radius: 50px;
     padding: 15px;
-    box-shadow: 0 0 5px #ffffff1f;
+    box-shadow: 0 0 0px 1px #ffffff1f;
     cursor: pointer;
-    transition: 0.2s ease;
+
+    svg path {
+        transition: 0.5s ease;
+    }
 
     &:hover {
-        box-shadow: 0 0 10px #ffffff1f;
+        background: #fff;
+        box-shadow: 0 0 0px 1px #00000038;
+    }
+
+    &:hover svg path {
+        fill: #000;
     }
 }
 
