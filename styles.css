@@ -974,6 +974,13 @@ header {
         .title {
             h3 {
                 font-size: 3rem;
+
+                img {
+                    margin-left: 12px;
+                    transform: translateY(5px);
+                    user-select: none;
+                    pointer-events: none;
+                }
             }
         }
 
@@ -1004,7 +1011,8 @@ header {
                     resize: vertical;
                 }
 
-                input, textarea {
+                input,
+                textarea {
                     font-family: var(--fontInter);
                     border-radius: 10px;
                     border: 1px solid #ffffff88;
@@ -1020,7 +1028,7 @@ header {
 
         .btn-enviar {
             margin-top: 10px;
-            
+
             button {
                 padding: 12px 70px;
                 border-radius: 50px;
@@ -1226,12 +1234,15 @@ header {
     }
 
     .contato {
+        position: relative;
+
         .contato-content {
             .inputs {
                 .input-all {
                     max-width: 100%;
-                    
-                    input, textarea {
+
+                    input,
+                    textarea {
                         margin: 0;
                     }
                 }
