@@ -190,6 +190,10 @@ header {
         padding: 20px;
         position: relative;
 
+        ::selection {
+            background-color: #656565;
+        }
+
         .nome-skill {
             display: flex;
             flex-direction: column;
@@ -358,6 +362,11 @@ header {
         padding: 100px 0;
         position: relative;
 
+        ::selection {
+            background-color: #656565;
+            color: #fff;
+        }
+
         .serv-title {
             h2 {
                 font-size: 2.8rem;
@@ -513,6 +522,11 @@ header {
         padding: 50px;
         gap: 50px;
 
+        ::selection {
+            background-color: #000000cb;
+            color: #fff;
+        }
+
         .sobre-img {
             width: 100%;
             display: flex;
@@ -559,6 +573,7 @@ header {
                 font-family: var(--fontInter);
                 font-size: 1.3rem;
                 min-width: 50%;
+                cursor: text;
             }
         }
     }
@@ -581,6 +596,11 @@ header {
         justify-content: center;
         gap: 100px;
         position: relative;
+
+        ::selection {
+            background-color: #656565a4;
+            color: #fff;
+        }
 
         .marcas-info {
             .m-sticky {
@@ -614,6 +634,7 @@ header {
                     font-size: 1.3rem;
                     max-width: 500px;
                     color: #fdfdfdb9;
+                    cursor: text;
                 }
 
                 p,
@@ -843,6 +864,10 @@ header {
         font-family: var(--fontInter);
         z-index: 2;
         padding: 100px 0;
+        
+        ::selection {
+            background-color: #464646;
+        }
 
         .title {
             h3 {
@@ -970,6 +995,10 @@ header {
         font-family: var(--fontInter);
         margin: 100px 0;
         overflow: hidden;
+
+        ::selection {
+            background-color: #303030;
+        }
 
         .title {
             h3 {
